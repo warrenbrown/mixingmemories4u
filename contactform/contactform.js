@@ -90,9 +90,10 @@ jQuery(document).ready(function($) {
     });
     if (ferror) return false;
     else var str = $(this).serialize();
+    jQuery.support.cors = true;
     $.ajax({
       type: "POST",
-      url: "contactform/contactform.php",
+      url: "contactform/contact.php",
       data: str,
       success: function(msg) {
         // alert(msg);
