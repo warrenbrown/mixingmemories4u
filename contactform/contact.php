@@ -1,5 +1,4 @@
 <?php
-header("Access-Control-Allow-Origin: *");
   $name = $_POST['name'];
   $email = $_POST['email'];
   $subject = $_POST['subject'];
@@ -15,6 +14,6 @@ header("Access-Control-Allow-Origin: *");
   $headers .="Reply-To: $email \r\n";
 
   mail($to,$email_subject,$email_body,$headers);
-
+  header("Access-Control-Allow-Origin: *");
   header("location: index.html");
  ?>
