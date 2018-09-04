@@ -14,6 +14,6 @@
   $headers .="Reply-To: $email \r\n";
 
   mail($to,$email_subject,$email_body,$headers);
-  header("Access-Control-Allow-Origin: *");
+
   header("location: index.html");
  ?>
